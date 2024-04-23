@@ -1,0 +1,7 @@
+FROM node:18.15 
+
+WORKDIR /app
+
+# RUN chmod 750 ./startreact.sh 
+
+CMD ["./startreact.sh"]

@@ -1,0 +1,31 @@
+version: "3"
+services:
+  api:
+    image: express-api
+    build:
+      context: ./node-api
+      dockerfile: Dockerfile.dev
+    container_name: express-container
+    volumes:
+      - "./node-api:/app"
+    networks:
+      - mynet
+    ports:
+      - "3001:3000"
+
+  web:
+    image: react-web
+    build:
+      context: ./react-webapp
+      dockerfile: Dockerfile.dev
+    container_name: react-container
+    volumes:
+      - "./react-webapp:/app"
+    networks:
+      - mynet
+    ports:
+      - "3002:3000"
+
+networks:
+  mynet:
+    driver: bridge

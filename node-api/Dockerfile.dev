@@ -1,0 +1,7 @@
+FROM node:latest
+
+WORKDIR /app
+
+# RUN chmod 777 ./startnode.sh 
+
+CMD ["./startnode.sh"]
