@@ -9,9 +9,10 @@ Another benefit of this setup is to use as a starting point to share all configu
 ## Use
 
 ```bash
-git clone --single-branch --branch base git@github.com:c0dingarchit3ct/dockerized-javascript-fullstack.git
 docker-compose build
 docker-compose run
+
+or docker-compose up --build
 ```
 
 Expect the Build phase to take longer the first time as it pulls the full (almost 1GB) node image, subsequnt builds should be much faster.
